@@ -221,6 +221,9 @@ export default function Home() {
         <div className="footer-brand">
           <span className="gold">Point</span> and <span className="gold">Profit</span>
         </div>
+        <p className="footer-sub" style={{ marginBottom: '0.75rem' }}>
+          <a href="/privacy">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms">Terms of Service</a> &nbsp;·&nbsp; <a href="/support">Support</a>
+        </p>
         <p className="footer-sub">
           Built by <a href="https://numberoneson.com" target="_blank" rel="noopener noreferrer">Number One Son Software</a> &nbsp;·&nbsp; © 2026
         </p>

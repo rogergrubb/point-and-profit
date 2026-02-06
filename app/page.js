@@ -5,8 +5,23 @@ export default function Home() {
       <section className="hero">
         <div className="crosshair">
           <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="dollarShine" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#FFE566" />
+                <stop offset="40%" stopColor="#FFD700" />
+                <stop offset="60%" stopColor="#FFF2A0" />
+                <stop offset="100%" stopColor="#FFB800" />
+              </linearGradient>
+              <filter id="dollarGlow">
+                <feGaussianBlur stdDeviation="2" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
             <circle cx="40" cy="40" r="24" stroke="#FFD700" strokeWidth="1.5" opacity="0.4" />
-            <circle cx="40" cy="40" r="3" fill="#FFD700" />
+            <circle cx="40" cy="40" r="15" fill="#FFD700" opacity="0.08" />
             <line x1="40" y1="8" x2="40" y2="22" stroke="#FFD700" strokeWidth="1.5" strokeLinecap="round" />
             <line x1="40" y1="58" x2="40" y2="72" stroke="#FFD700" strokeWidth="1.5" strokeLinecap="round" />
             <line x1="8" y1="40" x2="22" y2="40" stroke="#FFD700" strokeWidth="1.5" strokeLinecap="round" />
@@ -15,6 +30,7 @@ export default function Home() {
             <path d="M52 12H68V28" stroke="#FFD700" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             <path d="M68 52V68H52" stroke="#FFD700" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             <path d="M28 68H12V52" stroke="#FFD700" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <text x="40" y="46" textAnchor="middle" fontFamily="Georgia, serif" fontWeight="bold" fontSize="22" fill="url(#dollarShine)" filter="url(#dollarGlow)">$</text>
           </svg>
         </div>
 
